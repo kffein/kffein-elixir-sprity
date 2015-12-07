@@ -1,0 +1,24 @@
+{
+  "name": "kffein-elixir-sprity",
+  "version": "0.1.1",
+  "description": "Laravel Elixir wrapper around sprity Gulp task.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "keywords": [
+    "gulp",
+    "laravel",
+    "elixir",
+    "sprity"
+  ],
+  "author": "Kffein",
+  "license": "MIT",
+  "dependencies": {
+		"sprity": "latest",
+    "sprity-gm": "latest",
+    "gulp-if": "latest",
+    "kffein-sprity-stylus": "resources/gulp/kffein-sprity-stylus",
+    "underscore": "latest"
+  }
+}
