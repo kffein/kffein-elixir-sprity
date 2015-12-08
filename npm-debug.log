@@ -1,0 +1,99 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/stephanedemotte/Projects/kffein/npm/kffein-elixir-sprity',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package.tgz not in flight; packing
+9 info lifecycle kffein-elixir-sprity@0.1.2~prepublish: kffein-elixir-sprity@0.1.2
+10 silly lifecycle kffein-elixir-sprity@0.1.2~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package.tgz',
+11 verbose tar pack   '/Users/stephanedemotte/Projects/kffein/npm/kffein-elixir-sprity' ]
+12 verbose tarball /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package.tgz
+13 verbose folder /Users/stephanedemotte/Projects/kffein/npm/kffein-elixir-sprity
+14 verbose addLocalTarball adding from inside cache /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package.tgz
+15 silly cache afterAdd kffein-elixir-sprity@0.1.2
+16 verbose afterAdd /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package/package.json not in flight; writing
+17 verbose afterAdd /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package/package.json written
+18 silly publish { name: 'kffein-elixir-sprity',
+18 silly publish   version: '0.1.2',
+18 silly publish   description: 'Laravel Elixir wrapper around sprity Gulp task.',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 0' },
+18 silly publish   keywords: [ 'gulp', 'laravel', 'elixir', 'sprity' ],
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'git+https://github.com/kffein/kffein-elixir-sprity.git' },
+18 silly publish   homepage: 'https://github.com/kffein/kffein-elixir-sprity',
+18 silly publish   bugs: { url: 'https://github.com/kffein/kffein-elixir-sprity/issues' },
+18 silly publish   author: { name: 'Kffein' },
+18 silly publish   license: 'MIT',
+18 silly publish   dependencies:
+18 silly publish    { sprity: 'latest',
+18 silly publish      'sprity-gm': 'latest',
+18 silly publish      'gulp-if': 'latest',
+18 silly publish      'kffein-sprity-stylus': 'latest',
+18 silly publish      underscore: 'latest' },
+18 silly publish   gitHead: 'e033b45e2db187f132ce03bd4aa85e589191316a',
+18 silly publish   readme: 'ERROR: No README data found!',
+18 silly publish   _id: 'kffein-elixir-sprity@0.1.2',
+18 silly publish   _shasum: '3759d7bbe805ee04941c3b9755a10ada54056374',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name kffein-elixir-sprity
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/kffein-elixir-sprity
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/stephanedemotte/.npm/kffein-elixir-sprity/0.1.2/package.tgz
+26 verbose request uri https://registry.npmjs.org/kffein-elixir-sprity
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 4:18:27 PM
+29 verbose request using bearer token for auth
+30 verbose request id 636c92a079e995be
+31 http request PUT https://registry.npmjs.org/kffein-elixir-sprity
+32 http 403 https://registry.npmjs.org/kffein-elixir-sprity
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=60',
+33 verbose headers   'content-length': '95',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Tue, 08 Dec 2015 21:18:32 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-iad2134-IAD',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1449609512.256347,VS0,VE702' }
+34 verbose request invalidating /Users/stephanedemotte/.npm/registry.npmjs.org/kffein-elixir-sprity on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: "You cannot publish over the previously published version 0.1.2." : kffein-elixir-sprity
+36 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at emitTwo (events.js:87:13)
+36 verbose stack     at Request.emit (events.js:172:7)
+36 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1063:14)
+36 verbose stack     at emitOne (events.js:82:20)
+36 verbose stack     at Request.emit (events.js:169:7)
+36 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+37 verbose statusCode 403
+38 verbose pkgid kffein-elixir-sprity
+39 verbose cwd /Users/stephanedemotte/Projects/kffein/npm/kffein-elixir-sprity
+40 error Darwin 14.5.0
+41 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+42 error node v5.0.0
+43 error npm  v3.3.6
+44 error code E403
+45 error "You cannot publish over the previously published version 0.1.2." : kffein-elixir-sprity
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
