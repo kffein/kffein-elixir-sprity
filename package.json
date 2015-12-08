@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/KFFEIN/kffein-elixir-sprity"
+    "url": "https://github.com/kffein/kffein-elixir-sprity"
   },
-  "homepage": "https://github.com/KFFEIN/kffein-elixir-sprity",
+  "homepage": "https://github.com/kffein/kffein-elixir-sprity",
   "bugs": {
-    "url": "https://github.com/KFFEIN/kffein-elixir-sprity/issues"
+    "url": "https://github.com/kffein/kffein-elixir-sprity/issues"
   },
   "author": "Kffein",
   "license": "MIT",
