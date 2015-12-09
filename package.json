@@ -1,6 +1,6 @@
 {
   "name": "kffein-elixir-sprity",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Laravel Elixir wrapper around sprity Gulp task.",
   "main": "index.js",
   "scripts": {

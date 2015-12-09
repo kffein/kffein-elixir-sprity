@@ -12,25 +12,25 @@ Elixir.extend('sprity', function(options) {
 			output: config.assetsPath + '/img',
     }, config.images || {});
 
-    var dimensions = [{
-					ratio: 1, dpi: 72
+		options = _.extend({
+			src: config.images.src + '/**/*.{png,jpg,jpeg}',
+			name: 'sprites',
+			style: 'Sprites.styl',
+			cssPath: '../img/',
+			processor: 'kffein-sprity-stylus',
+			engine: 'gm',
+			format: 'png',
+			'gm-use-imagemagick': true,
+			dimension: [{ ratio: 1, dpi: 72
 				}, {
 					ratio: 2, dpi: 192
-				}]
+				}],
+			outputMixin: config.assetsPath + '/stylus/mixins'
+		}, options);
 
     new Elixir.Task('sprity', function () {
 
-			return sprity.src({
-				src: config.images.src + '/**/*.{png,jpg,jpeg}',
-				name: options.name || 'sprites',
-				style: options.style || 'Sprites.styl',
-				cssPath: options.cssPath || '../img/',
-				processor: options.processor || 'kffein-sprity-stylus',
-				engine: options.engine || 'gm',
-				format: options.format || 'png',
-				'gm-use-imagemagick': options['gm-use-imagemagick'] || true,
-				dimension: options.dimensions || dimensions,
-			})
+			return sprity.src(options)
 			.pipe(gulpif('*.png', 
 				gulp.dest(config.images.output), 
 				gulp.dest(options.outputMixin || config.assetsPath + '/stylus/mixins')
@@ -40,3 +40,4 @@ Elixir.extend('sprity', function(options) {
     })
     .watch(config.images.src + '/**/*.{png,jpg,jpeg}')
 });
+
