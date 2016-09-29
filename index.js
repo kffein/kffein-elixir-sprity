@@ -7,7 +7,7 @@ var gulpif   = require('gulp-if');
 Elixir.extend('sprity', function(options) {
 
 		options = _.extend({
-			src: config.assetsPath + '/sprites/**/*.{png,jpg,jpeg}',
+			src: Elixir.config.assetsPath + '/sprites/**/*.{png,jpg,jpeg}',
 			name: 'sprites',
 			style: 'Sprites.styl',
 			cssPath: '../img/',
@@ -19,8 +19,8 @@ Elixir.extend('sprity', function(options) {
 				}, {
 					ratio: 2, dpi: 192
 				}],
-			outputMixin: config.assetsPath + '/stylus/mixins',
-			outputSprites: config.publicPath + '/img'
+			outputMixin: Elixir.config.assetsPath + '/stylus/mixins',
+			outputSprites: Elixir.config.publicPath + '/img'
 		}, options);
 
     new Elixir.Task('sprity', function () {
